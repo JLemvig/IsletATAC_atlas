@@ -10,13 +10,16 @@ The cis-regulatory landscape of human islets remains incompletely characterised.
 
 Cycling cells followed trajectories towards all four major endocrine cell types, and their proportions were associated with age, BMI, sex and type 2 diabetes. A semi-supervised variational autoencoder (PeakANVI) learned separate cell and donor embeddings, and the donor components were tested for association with chromatin accessibility and donor traits. Peaks associated with the type 2 diabetes components were linked to target genes with the activity-by-contact (ABC) model and tested for enrichment of GWAS variants (LDSC, TORUS). Candidate transcription factors were prioritised by motif enrichment, ChromBPNet models and gene expression, which nominated PBX1 as a candidate regulator of beta cell dysfunction in type 2 diabetes.
 
-<!-- TODO: illustration, e.g. the graphical abstract as illustrations/graphical_abstract.png, with a short italic caption below it -->
+![Graphical abstract](illustrations/graphical_abstract.png)
+
+###### *Graphical abstract: snATAC-seq of islets from 98 donors in eight public studies is integrated into a chromatin atlas of 526,082 nuclei, including rare and cycling cells. A donor model separates cell and donor variation, and donor-linked regulation nominates PBX1 as a candidate regulator of beta cell programmes in type 2 diabetes. ND, non-diabetic; Pre, prediabetic; T2D, type 2 diabetes.*
 
 # Brief description of folders
 
 - `pipeline/`: analysis steps in run order, one folder per Methods section
 - `figures/`: scripts and notebooks that make the paper figures (`figN` = main figure, `esm_figN` = ESM figure)
 - `env/`: environment files
+- `illustrations/`: illustrations used in this README
 - `data/`, `results/`: not tracked, see "Data"
 
 All scripts are run from the repository root.
@@ -101,7 +104,6 @@ All scripts are run from the repository root.
 - `prepare_finetune_peaks.ipynb`, `finetune_nd_t2d_models.ipynb`: ND and T2D fine-tuning of the alpha and beta models
 - `motif_ablation_alpha_beta.ipynb`, `motif_ablation_all_celltypes.ipynb`: motif scan, enrichment and ablation (Fig. 5)
 - `motif_activity_heatmap.ipynb`: motif activity across cell types
-- `README.md`: run order, peak sets, versions and downloads of this step
 
 ### `figures/`
 
@@ -141,7 +143,7 @@ Only samples from untreated, purified human islets of adult donors were used; se
 - R analysis: ArchR (hg38) with MACS2 2.2.9.1, Harmony, Seurat 4.0.0 (Matrix 1.6-1.1), SeuratDisk, scDblFinder, PICsnATAC, slingshot, tricycle, UCell, mgcv, DESeq2, mapgen, liftOver. TODO: versions of the other R packages (`sessionInfo()` of the analysis environment).
 - PeakANVI donor model and AnnData notebooks: Python with PyTorch, scanpy and anndata.
 - GWAS: LDSC (commit aa33296, `env/ldsc.yml`, Python 2.7) with baselineLD v2.3, TORUS; installed by `pipeline/08_gwas/gwas_reference_setup.sh`.
-- ChromBPNet: chrombpnet 1.0.1 (Python 3.8, TensorFlow 2.8.0) for training; bpnet-lite, tangermeme and memelite for interpretation. Versions in `pipeline/10_chrombpnet/README.md`.
+- ChromBPNet: chrombpnet 1.0.1 (Python 3.8, TensorFlow 2.8.0) for training; bpnet-lite, tangermeme and memelite for interpretation.
 - ABC: ABC-Enhancer-Gene-Prediction Snakemake workflow (https://github.com/GreenleafLab/ABC-Enhancer-Gene-Prediction-CustomRegions).
 
 # License
