@@ -1,0 +1,21 @@
+data/
+results/
+*.rds
+*.arrow
+*.h5ad
+*.pdf
+*.png
+*.csv
+!pipeline/02_archr_qc/cutoffvalues.csv
+.Rhistory
+.RData
+.Rproj.user/
+.ipynb_checkpoints/
+
+# internal review notes (not for publication)
+*.review.md
+REVIEW_overview.md
+HANDOFF.md
+
+# figures are not ready for publication yet (remove this line when they are)
+figures/

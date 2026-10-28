@@ -1,0 +1,68 @@
+# Export of the conda env 'ldsc' used for LDSC (python2), reconstructed from conda-meta of
+# the original install (conda create -n ldsc -c bioconda -c conda-forge python=2.7 bitarray=0.8 pybedtools=0.7 nose=1.3 pip;
+# plus pip: scipy 0.18.0, pandas 0.20.0, numpy 1.16.0 from the ldsc environment.yml). GNU parallel is also installed in it
+# (used by pipeline/08_gwas/ldsc_pc_peaks.R for LD score computation). LDSC itself (ldsc.py) is cloned by pipeline/08_gwas/gwas_reference_setup.sh
+name: ldsc
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bedtools=2.31.1=hf5e1c6e_2
+  - bitarray=0.8.3=py27h14c3975_1000
+  - bzip2=1.0.8=h4bc722e_7
+  - c-ares=1.34.5=hb9d3cd8_0
+  - ca-certificates=2025.9.9=h06a4308_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - htslib=1.17=h6bc39ce_1
+  - keyutils=1.6.3=hb9d3cd8_0
+  - krb5=1.20.1=hf9c8cef_0
+  - ld_impl_linux-64=2.44=h1423503_1
+  - libblas=3.9.0=35_h59b9bed_openblas
+  - libcblas=3.9.0=35_he106b2a_openblas
+  - libcurl=7.87.0=h6312ad2_0
+  - libdeflate=1.24=h86f0d12_0
+  - libedit=3.1.20250104=pl5321h7949ede_0
+  - libev=4.33=hd590300_2
+  - libffi=3.2.1=he1b5a44_1007
+  - libgcc=15.1.0=h767d61c_5
+  - libgcc-ng=15.1.0=h69a702a_5
+  - libgfortran=15.1.0=h69a702a_5
+  - libgfortran5=15.1.0=hcea5267_5
+  - libgomp=15.1.0=h767d61c_5
+  - liblapack=3.9.0=35_h7ac8fdf_openblas
+  - libnghttp2=1.51.0=hdcd2b5c_0
+  - libopenblas=0.3.30=pthreads_h94d23a6_2
+  - libsqlite=3.46.0=hde9e2c9_0
+  - libssh2=1.10.0=haa6b8db_3
+  - libstdcxx=15.1.0=h8f9b012_5
+  - libstdcxx-ng=15.1.0=h4852527_5
+  - libzlib=1.2.13=h4ab18f5_6
+  - ncurses=6.5=h2d0b736_3
+  - nose=1.3.7=py27h8c360ce_1004
+  - openssl=1.1.1w=hd590300_0
+  - parallel=20250822=ha770c72_0
+  - perl=5.40.2=0_h5eee18b_perl5
+  - pip=20.1.1=pyh9f0ad1d_0
+  - pybedtools=0.7.10=py27ha92aebf_3
+  - pysam=0.20.0=py27h7835474_0
+  - python=2.7.15=h5a48372_1011_cpython
+  - python-dateutil=2.8.1=py_0
+  - python_abi=2.7=1_cp27mu
+  - pytz=2020.1=pyh9f0ad1d_0
+  - readline=8.2=h8c095d6_2
+  - samtools=1.18=hd87286a_0
+  - setuptools=44.0.0=py27_0
+  - six=1.16.0=pyh6c4a22f_0
+  - sqlite=3.46.0=h6d4b2fc_0
+  - tk=8.6.13=noxft_h4845f30_101
+  - wheel=0.37.1=pyhd8ed1ab_0
+  - xz=5.2.6=h166bdaf_0
+  - zlib=1.2.13=h4ab18f5_6
+  - pip:
+      - numpy==1.16.0
+      - pandas==0.20.0
+      - scipy==0.18.0
+      - python-dateutil==2.8.1
+      - pytz==2020.1
